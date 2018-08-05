@@ -1,0 +1,32 @@
+{
+    "photos": [
+        {
+            "id": 1,
+            "username": "Jake",
+            "user-avatar": "./avatarImg/avatar.png",
+            "image": "https://i.ytimg.com/vi/_Itxr9JJ6Vw/maxresdefault.jpg",
+            "caption": "#nomNom"
+        },
+        {
+            "id": 2,
+            "username": "Jake",
+            "user-avatar": "./avatarImg/avatar.png",
+            "image": "https://pixl.varagesale.com/http://s3.amazonaws.com/hopshop-image-store-production/132488520/23dfb9c5244e638fb9677e0ada564d22.jpeg?_ver=large_uploader_thumbnail&w=640&h=640&fit=crop&s=eb7e8b2096ab8966cb7ee1f4255ff0ad",
+            "caption": "#bunny"
+        },
+        {
+            "id": 3,
+            "username": "Jake",
+            "user-avatar": "./avatarImg/avatar.png",
+            "image": "https://learn.corel.com/wp-content/uploads/2016/10/7themes.jpg",
+            "caption": "#winterIsComing"
+        },
+        {
+            "id": 4,
+            "username": "Jake",
+            "user-avatar": "./avatarImg/avatar.png",
+            "image": "https://s-i.huffpost.com/gen/2800256/images/n-EASTER-CHICK-RABBIT-628x314.jpg",
+            "caption": "#bestBuds"
+        }
+    ]
+}
