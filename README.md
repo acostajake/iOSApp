@@ -1,2 +1,0 @@
-# iOSApp
-PhotoFeed App
