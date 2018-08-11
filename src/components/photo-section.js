@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class PhotoSection extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-        };
+        this.state = { likeHand: 'ios-thumbs-up-outline' };
+        this.like = false
+    }
+
+    toggleLike() {
+        this.like = !this.like;
+        if(this.like) this.setState({ likeHand: 'ios-thumbs-up'})
+        if(!this.like) this.setState({ likeHand: 'ios-thumbs-up-outline'})
     }
 
     render() {
@@ -15,9 +21,9 @@ export default class PhotoSection extends Component {
                 <View style={styles.thumbnailSection}>
                     <Image
                         style={styles.avatarImg}
-                        source={{ uri: this.props.photo.user-avatar }} />
+                        source={{ uri: this.props.photo.clearavatar }} />
                     <View style={styles.userName}>
-                        <Text>{this.props.photo.username}</Text>
+                        <Text styles={styles.username}>{this.props.photo.username}</Text>
                     </View>
                 </View>
                 <View>
@@ -26,11 +32,14 @@ export default class PhotoSection extends Component {
                         source={{ uri: this.props.photo.image }} />
                 </View>
                 <View style={styles.imageMeta}>
+                <TouchableWithoutFeedback onPress={this.toggleLike.bind(this)}>
                     <Ionicons
                         style={styles.like}
-                        name='ios-thumbs-up'
+                        name={this.state.likeHand}
                         size={25}
+
                     />
+                </TouchableWithoutFeedback>
                     <Text> {this.props.photo.username}</Text>
                     <Text> {this.props.photo.caption}</Text>
                 </View>
@@ -78,6 +87,7 @@ const styles = {
         padding: 5
     },
     like: {
-        padding: 5
+        padding: 5,
+        color: 'brown'
     }
 }
